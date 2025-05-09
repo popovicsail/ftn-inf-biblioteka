@@ -5,19 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnlineLib</title>
     <link rel="stylesheet" href="../../dist/index.css">
+    <link rel="stylesheet" href="../../dist/evidencija_knjiga/evidencija_knjiga.css">
 </head>
 <body>
     <nav class="navbar">
-        <h1 class="title">TourApp</h1>
+        <h1 class="title">Online Library</h1>
         <ul class="nav-links">
             <li><a href="../contact/contact.html">Kontakt</a></li>
             <li><a href="evidencija_knjiga.html">Evidencija Knjiga</a></li>
+            <li><a href="../iznajmljivanje_knjiga/iznajmljivanje_knjiga.html">Iznajmljivanje Knjiga</a></li>
         </ul>
     </nav>
     <h1>Evidencija Knjiga</h1>
 
-    <div id="book-list">
-    </div>
+    <section id="books-form-section">
+        <form id="books-form">
+            <div class="books-form-inputRow">
+                <!-- <label for="url">URL</label> -->
+                <input type="number" id="url" max="12" name="url" placeholder="Unesite sliku knjige (ZA SADA, BROJ OD 1 DO 12!!!!)">
+            </div>
+
+            <div class="books-form-inputRow">
+                <!-- <label for="title">TITLE</label> -->
+                <input type="text" id="title" name="title" placeholder="Unesite naziv knjige" required>
+            </div>
+
+            <div class="books-form-inputRow">
+                <!-- <label for="description">DESCRIPTION</label> -->
+                <input type="text" id="description" name="description" placeholder="Unesite opis knjige" required>
+            </div>
+
+            <div class="books-form-inputRow">
+                <!-- <label for="date">PUBLISH DATE</label> -->
+                <input type="datetime-local" id="date" name="date" required>
+            </div>
+
+            <div class="books-form-inputRow">
+                <!-- <label for="popularity">POPULARITY</label> -->
+                <input type="number" max="5" id="popularity" name="popularity" placeholder="Unesite ocenu od 1 do 5" required>
+            </div>
+
+            <div class="books-form-btnRow">
+                <!-- <label for="submitBtn"></label> -->
+                <input type="submit" id="submitBtn" value="Submit" required>
+            </div>
+        </form>
+    </section>
+
+    <section id="books-all-section">
+        <table id="books-all-table">
+
+        </table>
+    </section>
+
+
     
     <script src="../index.js"></script>
     <script src="evidencija_knjiga.js"></script>
